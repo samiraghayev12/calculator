@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<script>
+function dis(val){
+
+    document.getElementById('result').value+=val
+}
+
+alert("Xoş Gəlmisiniz!");
+
+function solve(){
+
+let x=document.getElementById('result').value
+let y=eval(x)
+document.getElementById('result').value = y
+
+}
+
+function clr(){
+    document.getElementById('result').value=""
+}
+
+
+</script>
+<style>
+body{
+color: #fff;
+background: rgb(23, 77, 85);
+}
+.title{
+
+  margin-bottom: 10px;
+  margin: 0 auto;
+  background: #000000;
+  border: solid 1px rgb(182, 179, 179) ;
+  text-align: center;
+  width: 475px;
+  height: 30px;
+  padding: 5px 0 0 0;
+  color: rgb(182, 179, 179);
+  border-radius: 7px;
+}
+
+input[type="button"]
+{
+
+font-size: 20px;
+background-color: rgb(182, 179, 179);
+color: black;
+border: solid 1px  rgb(182, 179, 179) ;
+width: 100%;
+padding: 20px
+
+}
+input[type="text"]
+
+{
+font-size: 20px;
+background-color:  rgb(116, 113, 113);
+border: solid  rgb(23, 77, 85) 1px; 
+ width:100%
+ 
+}
+input[type="button"]:hover
+
+{
+    background: rgba(16, 241, 211, 0.467)
+}
+
+table{
+    margin: 0 auto;
+    width: 300px;
+    height: 250px;
+    border-radius: 7px;
+}
+#result{
+    width: 400px;
+    height: 100%;
+    background-color:rgb(83, 81, 81)  ;
+    color: #fff;
+    
+}
+
+</style>
+<body>
+    <div class="title"><b><font size=5>Calculator...Samir Aghayev</font></b></div>
+<table border="1">
+<tr>
+<td colspan="3" rowspan=""><input type="text" id="result" placeholder="Hesablayacaqınız Ədədi Yazın"></td>
+<td><input type="button" value="=" onclick="solve()" > </td>
+</tr>
+<tr>
+
+    <td><input type="button" value="1" onclick="dis('1')"> </td>
+    <td><input type="button" value="2" onclick="dis('2')" > </td>
+    <td><input type="button" value="3" onclick="dis('3')" > </td>
+    <td><input type="button" value="/" onclick="dis('/')" > </td>
+
+</tr>
+<tr>
+
+    <td><input type="button" value="4" onclick="dis('4')" > </td>
+    <td><input type="button" value="5" onclick="dis('5')" > </td>
+    <td><input type="button" value="6" onclick="dis('6')" > </td>
+    <td><input type="button" value="-" onclick="dis('-')" > </td> 
+
+</tr>
+<tr>
+
+    <td><input type="button" value="7" onclick="dis('7')" > </td>
+    <td><input type="button" value="8" onclick="dis('8')" > </td>
+    <td><input type="button" value="9" onclick="dis('9')" > </td>
+    <td><input type="button" value="+" onclick="dis('+')" > </td> 
+
+</tr>
+<tr>
+
+    <td><input type="button" value="." onclick="dis('.')" > </td>
+    <td><input type="button" value="0" onclick="dis('0')" > </td>
+    <td><input type="button" value="C" onclick="clr()"></td> 
+    <td><input type="button" value="*" onclick="dis('*')" > </td> 
+
+</tr>
+</table>
+</body>
+</html>
